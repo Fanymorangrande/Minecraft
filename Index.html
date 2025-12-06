@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primer Mes - Minecraft Edition</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', cursive, sans-serif;
+      background: url('https://i.imgur.com/8fKQZ0R.png') repeat; /* Césped pixelado */
+      color: #fff;
+      text-align: center;
+    }
+    header {
+      background: #3c8527;
+      padding: 20px;
+      border-bottom: 5px solid #2a5d1a;
+    }
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      text-shadow: 2px 2px #000;
+    }
+    .game-area {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px;
+      gap: 10px;
+    }
+    .block {
+      width: 100px;
+      height: 100px;
+      background-size: cover;
+      border: 3px solid #2a5d1a;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .message {
+      margin-top: 15px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    footer {
+      background: #2a5d1a;
+      padding: 10px;
+      font-size: 12px;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>🌟 Feliz Primer Mes, Mi Amor 🌟</h1>
+    <p>Versión Minecraft con minijuego</p>
+  </header>
+
+  <main>
+    <h2>Rompe los bloques para descubrir mensajes 💎</h2>
+    <div class="game-area">
+      <div class="block" style="background-image:url('https://i.imgur.com/9z3zF8G.png')" onclick="reveal('msg1')"></div>
+      <div class="block" style="background-image:url('https://i.imgur.com/2yaf2wb.png')" onclick="reveal('msg2')"></div>
+      <div class="block" style="background-image:url('https://i.imgur.com/3gkYQYF.png')" onclick="reveal('msg3')"></div>
+    </div>
+
+    <div id="msg1" class="message hidden">“Un mes contigo es como encontrar diamantes en la primera cueva 💎.”</div>
+    <div id="msg2" class="message hidden">“Eres mi compañero de aventuras, mi mejor partida y mi mundo favorito 🌍.”</div>
+    <div id="msg3" class="message hidden">“Nuestro amor es más fuerte que una armadura de netherite ❤️.”</div>
+  </main>
+
+  <footer>
+    Hecho con cariño por Fany 🌸 · Inspirado en Minecraft ⛏️
+  </footer>
+
+  <script>
+    function reveal(id){
+      document.getElementById(id).classList.remove('hidden');
+      alert("¡Bloque roto! 🎉 Has desbloqueado un mensaje.");
+    }
+  </script>
+</body>
+</html>
